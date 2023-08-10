@@ -32,6 +32,8 @@ public class AllIndexes {
     }
 
     public static void main(String[] args) {
+        char c='a';
+        System.out.println(c-97);
         int res[] = allIndexes(new int[]{1, 2, 3, 2, 4, 2}, 2);
         for (int i = 0; i < res.length; i++) {
             System.out.print(res[i]+" ");

@@ -8,7 +8,7 @@ package com.mycompany.mavenproject1.Recursion;
  *
  * @author ssingh
  */
-public class Keypad {
+public class PrintKeypadCombinations {
 
     public static char[] helperFunction(int number) {
         switch (number) {
@@ -23,38 +23,34 @@ public class Keypad {
             case 6:
                 return new char[]{'m', 'n', 'o'};
             case 7:
-                return new char[]{'p', 'q', 'r','s'};
+                return new char[]{'p', 'q', 'r', 's'};
             case 8:
-                return new char[]{'t', 'u','v'};
+                return new char[]{'t', 'u', 'v'};
             case 9:
-                return new char[]{'w', 'x','y','z'};
+                return new char[]{'w', 'x', 'y', 'z'};
             default:
                 return new char[]{};
         }
     }
 
-    public static String[] keypad(int n) {
-        // Write your code here
-        if(n==0){
-            return new String[]{""};
-        }
-        String temp[]=keypad(n/10);
-        char arr[]=helperFunction(n%10);
-        String resultingArray[]=new String[arr.length*temp.length];
-        int resultingArrayIndex=0;
-        for(int i=0;i<arr.length;i++){
-            for(int j=0;j<temp.length;j++){
-                resultingArray[resultingArrayIndex++]=temp[j]+""+arr[i];
-            }
-        }
-        return resultingArray;
-    }
-    public static void main(String[] args) {
-        String res[]=keypad(2);
-        System.out.println("res arry is "+ res.length);
-        for(int i=0;i<res.length;i++){
-            System.out.println("value is "+res[i]);
-        }
+    public static void keypad(int n) {
+        keypad(n, "");
     }
 
+    public static void keypad(int n, String outputSoFar) {
+        if(n==0){
+            System.out.println(outputSoFar);
+            return;
+        }
+        // call helper to get 2..3..4(options of last digit)
+        char arr[]=helperFunction(n%10);
+        
+        for( int i=0;i<arr.length;i++){
+            keypad(n/10, arr[i]+outputSoFar);
+        }
+    }
+    
+    public static void main(String[] args) {
+        keypad(23);
+    }
 }
