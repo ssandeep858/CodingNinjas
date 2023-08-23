@@ -14,49 +14,24 @@ package com.mycompany.mavenproject1.Recursion;
  */
 public class CheckAB {
 
-    public static boolean check(String input) {
-        if (input.length() == 0 || input.equals("")) {
+    public static boolean checkAB(String input) {
+        if(input.length()==0){
             return true;
         }
-
-        if (input.charAt(0) == 'a') {
-            if (input.substring(1).equals("")) {
-                return check(input.substring(1));
+        
+        if(input.charAt(0)=='a'){
+            if(input.substring(1).length()>1 && input.substring(1,3).equals("bb")){
+                return checkAB(input.substring(3));
             }
-            if (input.substring(1, 2).equals("a")) {
-                return check(input.substring(2));
+            else{
+                return checkAB(input.substring(1));
             }
-            if (input.substring(1, 3).equals("bb")) {
-                return check(input.substring(3));
-            }
-            //else  return check(input.substring(2));
-        } else if (input.substring(0, 2).equals("bb")) {
-            if (input.substring(2).equals("")) {
-                return check(input.substring(2));
-            }
-            if (input.substring(2, 3).equals("a")) {
-                return check(input.substring(3));
-            }
-            //else  return check(input.substring(2));
         }
         return false;
     }
 
-    public static boolean checkAB(String input) {
-        // Write your code here
-        if (input.length() == 0) {
-            return false;
-        }
-        if (input.charAt(0) != 'a') {
-            return false;
-        } else {
-            return check(input.substring(1));
-        }
-
-    }
-
     public static void main(String[] args) {
-        System.out.println(checkAB("abbaabb"));//abbaabb
+        System.out.println(checkAB("abababa"));//abbaabb
     }
 
 }

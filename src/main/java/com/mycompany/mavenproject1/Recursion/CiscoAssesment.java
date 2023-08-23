@@ -88,9 +88,26 @@ public class CiscoAssesment {
         return lowElement;
     }
 
+    public static int binarySearch(int input[], int element, int startIndex, int midIndex, int endIndex) {
+        if (input[midIndex] == element) {
+            return midIndex;
+        }
+        while (startIndex < endIndex) {
+            if (element > input[midIndex]) {
+                startIndex = midIndex + 1;
+            } else {
+                endIndex = midIndex - 1;
+            }
+            midIndex = (startIndex + endIndex) / 2;
+            return binarySearch(input, element, startIndex, midIndex, endIndex);
+        }
+        return -1;
+    }
+
     public static void main(String[] args) {
+        System.out.println(binarySearch(new int[]{1,2,3,4,5,6}, 33, 0, 2, 5));
         //printMode(new int[]{3, 3, 2, 2, 1, 1, 4});
-        int res=funcTwins(new int[]{1, 1, 3, 3, 4},0);
-        System.out.println(res);
+        //int res = funcTwins(new int[]{1, 1, 3, 3, 4}, 0);
+        //System.out.println(res);
     }
 }

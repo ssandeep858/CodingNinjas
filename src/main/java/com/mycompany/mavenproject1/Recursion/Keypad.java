@@ -50,7 +50,7 @@ public class Keypad {
         return resultingArray;
     }
     public static void main(String[] args) {
-        String res[]=keypad(2);
+        String res[]=keypad(23);
         System.out.println("res arry is "+ res.length);
         for(int i=0;i<res.length;i++){
             System.out.println("value is "+res[i]);
