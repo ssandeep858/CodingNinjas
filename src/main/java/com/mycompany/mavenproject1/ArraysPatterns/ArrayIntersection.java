@@ -4,7 +4,6 @@ package com.mycompany.mavenproject1.ArraysPatterns;
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-
 /**
  *
  * @author ssand
@@ -52,21 +51,12 @@ public class ArrayIntersection {
     }
 
     public static void main(String[] args) throws NumberFormatException, IOException {
-        int t = Integer.parseInt(br.readLine().trim());
 
-        while (t > 0) {
-
-            int[] input1 = takeInput();
-            int[] input2 = takeInput();
-            int[] res=intersections(input1, input2);
-            
-
-            t -= 1;
-           // int[] res = intersections(new int[]{11, 11, 12, 12, 13}, new int[]{11, 12, 12, 13, 13});
-            for (int i = 0; i < res.length; i++) {
-                System.out.print(res[i] + " ");
-            }
-            System.out.println();
+        int[] res = intersections(new int[]{11, 11, 12, 12, 13}, new int[]{11, 12, 12, 13, 13});
+        for (int i = 0; i < res.length; i++) {
+            System.out.print(res[i] + " ");
         }
+        System.out.println();
+
     }
 }

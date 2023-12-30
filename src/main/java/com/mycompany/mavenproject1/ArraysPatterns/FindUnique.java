@@ -12,6 +12,12 @@ package com.mycompany.mavenproject1.ArraysPatterns;
 public class FindUnique {
 
     public static int findUnique(int[] arr) {
+       
+        int res=0;
+        for(int i=0;i<arr.length;i++){
+            res^=arr[i];
+        }
+        System.out.println(res);
         for (int i = 0; i < arr.length; i++) {
             boolean found = false;
             for (int j = 0; j < arr.length; j++) {
@@ -32,6 +38,7 @@ public class FindUnique {
 
     public static void main(String[] args) {
         int res = findUnique(new int[]{2, 3, 1, 6, 3, 6, 2});
+        
         System.out.println(res);
     }
 }
