@@ -1,1 +1,3 @@
 # CodingNinjas
+
+## practice questions
