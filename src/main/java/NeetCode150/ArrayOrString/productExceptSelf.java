@@ -39,6 +39,8 @@ public class productExceptSelf {
         printArr(res);
         tempProduct = 1;
         // for postFix calculation 
+        
+        //Input: nums = [1,2,3,4]
         for (int i = nums.length - 1; i >= 0; i--) {
             if (i == nums.length - 1) {
                 tempProduct *= 1;
