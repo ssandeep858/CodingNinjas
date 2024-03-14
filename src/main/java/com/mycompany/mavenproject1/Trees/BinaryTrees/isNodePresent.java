@@ -19,18 +19,7 @@ package com.mycompany.mavenproject1.Trees.BinaryTrees;
  * see that 7 is present in the tree. So, the output will be true. Sample Input
  * 2: 2 3 4 -1 -1 -1 -1 10 Sample Output 2: false
  */
-class BinaryTreeNode<T> {
 
-    T data;
-    BinaryTreeNode<T> left;
-    BinaryTreeNode<T> right;
-
-    public BinaryTreeNode(T data) {
-        this.data = data;
-        this.left = null;
-        this.right = null;
-    }
-}
 
 public class isNodePresent {
 

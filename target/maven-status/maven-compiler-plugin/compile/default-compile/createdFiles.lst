@@ -9,6 +9,7 @@ com\mycompany\mavenproject1\ArraysPatterns\PrintLikeAWave.class
 com\mycompany\mavenproject1\ArraysPatterns\normalBinarySearch.class
 com\mycompany\mavenproject1\Recursion\PrintKeypadCombinations.class
 com\mycompany\mavenproject1\Sorting\InsertionSort.class
+com\mycompany\mavenproject1\Trees\ReplaceNodeWithDepth.class
 com\mycompany\mavenproject1\ArraysPatterns\CharPattern1.class
 com\mycompany\mavenproject1\Sorting\MergeSort_Recursion_ExtraArrays.class
 stacks\checkRedundantBrackets.class
@@ -25,6 +26,7 @@ com\mycompany\mavenproject1\Recursion\RemoveConsecutiveDuplicates.class
 NeetCode150\ArrayOrString\SpiralMatrix.class
 NeetCode150\Array\ListOrHashMaps\characterReplacement.class
 com\mycompany\mavenproject1\ArraysPatterns\SumPattern.class
+com\mycompany\mavenproject1\Trees\BinaryTrees\isNodePresent.class
 TreesOrGraphs\FindMinimum.class
 com\mycompany\mavenproject1\ArraysPatterns\PrintAllPairs.class
 TreesOrGraphs\isSubTree.class
@@ -65,6 +67,7 @@ NeetCode150\Array\ListOrHashMaps\KLargestElement.class
 com\mycompany\mavenproject1\ArraysPatterns\salary.class
 NeetCode150\Array\ListOrHashMaps\CoinChange.class
 TestQuestions\splitArray.class
+com\mycompany\mavenproject1\Trees\CountLeafNode.class
 NeetCode150\ArrayOrString\GroupAnagrams.class
 com\mycompany\mavenproject1\Recursion\ArrayIntersection.class
 queues\StackUsing2Queue.class
@@ -113,6 +116,7 @@ TestQuestions\deleteAlternateNodes.class
 com\mycompany\mavenproject1\ArraysPatterns\ArrayIntersection.class
 com\mycompany\mavenproject1\ArraysPatterns\TPattern2.class
 com\mycompany\mavenproject1\Trees\SumOfNodes.class
+com\mycompany\mavenproject1\Trees\BinaryTrees\BinaryTreeNode.class
 NeetCode150\Array\ListOrHashMaps\reorderLogFiles.class
 com\mycompany\mavenproject1\ArraysPatterns\SumOfBoundariesAndDiagonals.class
 com\mycompany\mavenproject1\ArraysPatterns\CharacterCase.class
@@ -145,6 +149,7 @@ NeetCode150\LinkedList\removeNthFromEnd.class
 com\mycompany\mavenproject1\ArraysPatterns\CharPattern2.class
 com\mycompany\mavenproject1\Recursion\Keypad.class
 com\mycompany\mavenproject1\LinkedList\PrintReverse.class
+com\mycompany\mavenproject1\Trees\SecondLargest.class
 com\mycompany\mavenproject1\Trees\CountLeafNodes$TreeNode.class
 com\mycompany\mavenproject1\LinkedList\BubbleSort.class
 com\mycompany\mavenproject1\LinkedList\SwapNodes.class
@@ -195,6 +200,7 @@ com\mycompany\mavenproject1\ArraysPatterns\FindUnique.class
 com\mycompany\mavenproject1\Sorting\BubbleSort.class
 NeetCode150\Array\ListOrHashMaps\LongestSubstringWithoutRepeatingCharacter.class
 com\mycompany\mavenproject1\ArraysPatterns\CharPattern3.class
+com\mycompany\mavenproject1\Trees\BinaryTrees\getSum.class
 com\mycompany\mavenproject1\Recursion\FirstIndex.class
 com\mycompany\mavenproject1\Recursion\uniqueElement.class
 com\mycompany\mavenproject1\Recursion\CalculatePower.class
