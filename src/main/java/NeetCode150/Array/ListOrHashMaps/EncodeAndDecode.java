@@ -48,7 +48,7 @@ public class EncodeAndDecode {
     }
 
     public static void main(String[] args) {
-        String res = encode(Arrays.asList("lintcdcdcdc", "code", "love", "you"));
+        String res = encode(Arrays.asList("lint", "code", "love", "you"));
         System.out.println(res);
         List<String> r = decode(res);
         System.out.println(Arrays.toString(r.toArray()));
