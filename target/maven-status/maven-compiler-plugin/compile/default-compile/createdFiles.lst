@@ -24,9 +24,9 @@ NeetCode150\LinkedList\Node.class
 TestQuestions\checkSequence.class
 com\mycompany\mavenproject1\Recursion\RemoveConsecutiveDuplicates.class
 NeetCode150\ArrayOrString\SpiralMatrix.class
-NeetCode150\Array\ListOrHashMaps\characterReplacement.class
 com\mycompany\mavenproject1\ArraysPatterns\SumPattern.class
 com\mycompany\mavenproject1\Trees\BinaryTrees\isNodePresent.class
+NeetCode150\Array\ListOrHashMaps\LongestRepeatingCharacterReplacement.class
 TreesOrGraphs\FindMinimum.class
 com\mycompany\mavenproject1\ArraysPatterns\PrintAllPairs.class
 TreesOrGraphs\isSubTree.class
@@ -92,6 +92,7 @@ com\mycompany\mavenproject1\Trees\NumNodeGreater.class
 com\mycompany\mavenproject1\ArraysPatterns\TPattern3.class
 com\mycompany\mavenproject1\Recursion\ReplaceCharacter.class
 NeetCode150\LinkedList\mergeTwoLists.class
+com\mycompany\mavenproject1\Trees\BinaryTrees\PrintLevelWise.class
 com\mycompany\mavenproject1\Recursion\CheckAB.class
 NeetCode150\ArrayOrString\ContainsDuplicate.class
 com\mycompany\mavenproject1\LinkedList\NodeUse.class
