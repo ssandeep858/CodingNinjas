@@ -55,7 +55,7 @@ public class ThreeSum {
             }
         }
         //System.out.println(set);
-        System.out.println(Arrays.deepToString(l.toArray()));
+        //System.out.println(Arrays.toString(l.toArray()));
         return new ArrayList<>(set);
     }
 
