@@ -15,6 +15,8 @@ public class isPalindrome {
 //(lc == rc || isLetter(lc) && isLetter(rc) && Math.abs(lc - rc) == Math.abs('a' - 'A')
 // either same hoga ya fir left mein A ho ya right me a so absolute difference dekhengein    
     
+    
+    //  s = s.replaceAll("[^a-zA-Z0-9]", "").toLowerCase();
     public static String getCleanString(String s) {
         String res = "";
         for (int i = 0; i < s.length(); i++) {

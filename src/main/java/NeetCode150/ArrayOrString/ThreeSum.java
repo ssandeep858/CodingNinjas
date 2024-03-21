@@ -34,6 +34,7 @@ public class ThreeSum {
     public static List<List<Integer>> threeSum(int[] nums) {
         Arrays.sort(nums);
         Set<List<Integer>> set = new HashSet<>();
+        List<List<Integer>> l=new ArrayList<>();
         for (int i = 0; i < nums.length; i++) {
             int currentSumToFind = 0 - nums[i];
 
@@ -43,6 +44,7 @@ public class ThreeSum {
             while (lowPointer < highPointer) {
                 if (nums[lowPointer] + nums[highPointer] == currentSumToFind) {
                     set.add(Arrays.asList(nums[i], nums[lowPointer], nums[highPointer]));
+                    l.add(Arrays.asList(nums[i], nums[lowPointer], nums[highPointer]));
                     lowPointer++;
                     highPointer--;
                 } else if (nums[lowPointer] + nums[highPointer] < currentSumToFind) {
@@ -52,7 +54,8 @@ public class ThreeSum {
                 }
             }
         }
-        System.out.println(set);
+        //System.out.println(set);
+        System.out.println(Arrays.deepToString(l.toArray()));
         return new ArrayList<>(set);
     }
 
