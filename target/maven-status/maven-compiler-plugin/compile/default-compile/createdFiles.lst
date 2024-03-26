@@ -33,6 +33,7 @@ TreesOrGraphs\isSubTree.class
 com\mycompany\mavenproject1\LinkedList\EvenAfterOdd.class
 com\mycompany\mavenproject1\Recursion\FindSubsequences.class
 NeetCode150\ArrayOrString\ComparatorPractice.class
+NeetCode150\Array\ListOrHashMaps\removeDuplicatesinSortedArray.class
 stacks\StockSpan.class
 com\mycompany\mavenproject1\ArraysPatterns\Fibonacci.class
 NeetCode150\Array\Stack\GenerateParenthesis.class

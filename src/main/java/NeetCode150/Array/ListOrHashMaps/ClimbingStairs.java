@@ -25,9 +25,6 @@ public class ClimbingStairs {
             second = third;
         }
         return third;
-        // 3
-        // 
-        //
     }
 
     public static void main(String[] args) {
