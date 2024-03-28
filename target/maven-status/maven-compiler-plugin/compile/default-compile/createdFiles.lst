@@ -8,6 +8,7 @@ NeetCode150\LinkedList\copyRandomList.class
 com\mycompany\mavenproject1\ArraysPatterns\PrintLikeAWave.class
 com\mycompany\mavenproject1\ArraysPatterns\normalBinarySearch.class
 com\mycompany\mavenproject1\Recursion\PrintKeypadCombinations.class
+NeetCode150\Array\ListOrHashMaps\SearchInsertPosition.class
 com\mycompany\mavenproject1\Sorting\InsertionSort.class
 com\mycompany\mavenproject1\Trees\ReplaceNodeWithDepth.class
 com\mycompany\mavenproject1\ArraysPatterns\CharPattern1.class
@@ -83,6 +84,7 @@ NeetCode150\ArrayOrString\MaximumSubArray.class
 com\mycompany\mavenproject1\Recursion\CountZerosRec.class
 com\mycompany\mavenproject1\Trees\MaxSumNode$TreeNode.class
 NeetCode150\Array\ListOrHashMaps\EncodeAndDecode.class
+TestQuestions\Microsoft.class
 NeetCode150\ArrayOrString\LongestCommonSubSequence.class
 com\mycompany\mavenproject1\Sorting\MergeSort_Recursion.class
 com\mycompany\mavenproject1\ArraysPatterns\NthFibonacci.class

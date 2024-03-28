@@ -4,6 +4,8 @@
  */
 package com.mycompany.mavenproject1.Trees;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author ssingh Problem statement Given a generic tree, count and return the
@@ -17,6 +19,16 @@ package com.mycompany.mavenproject1.Trees;
  */
 public class CountLeafNode {
 
+        class TreeNode<T> {
+
+        T data;
+        ArrayList<TreeNode<T>> children;
+
+        TreeNode(T data) {
+            this.data = data;
+            children = new ArrayList<TreeNode<T>>();
+        }
+    }
     public static int countLeafNodes(TreeNode<Integer> root) {
 
         // Write your code here
