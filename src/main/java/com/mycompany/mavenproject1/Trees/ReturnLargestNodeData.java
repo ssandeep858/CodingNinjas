@@ -10,20 +10,20 @@ import java.util.ArrayList;
  *
  * @author ssingh
  */
-class TreeNode<T> {
-
-    T data;
-    TreeNode<T> left;
-    TreeNode<T> right;
-
-    TreeNode(T data) {
-        this.data = data;
-        this.left = null;
-        this.right = null;
-    }
-}
-
 public class ReturnLargestNodeData {
+
+    class TreeNode<T> {
+
+        T data;
+        TreeNode<T> left;
+        TreeNode<T> right;
+
+        TreeNode(T data) {
+            this.data = data;
+            this.left = null;
+            this.right = null;
+        }
+    }
 
     public static int returnLargestNodeData(TreeNode<Integer> root) {
 
@@ -32,7 +32,7 @@ public class ReturnLargestNodeData {
         }
 
         int leftLargest = returnLargestNodeData(root.left);
-        int rightLargest= returnLargestNodeData(root.right);
+        int rightLargest = returnLargestNodeData(root.right);
         return Math.max(root.data, Math.max(leftLargest, rightLargest));
     }
 }

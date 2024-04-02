@@ -2,24 +2,13 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package com.mycompany.mavenproject1.Trees;
+package com.mycompany.mavenproject1.Trees.BinaryTrees;
 
 /**
  *
  * @author ssingh
  */
-class BinaryTreeNode<T> {
 
-    T data;
-    BinaryTreeNode<T> left;
-    BinaryTreeNode<T> right;
-
-    public BinaryTreeNode(T data) {
-        this.data = data;
-        this.left = null;
-        this.right = null;
-    }
-}
 
 public class HeightOfBinaryTree {
 
@@ -28,5 +17,9 @@ public class HeightOfBinaryTree {
         if (root == null) {
             return 0;
         }
-
+        int h = 1;
+        int leftH=height(root.left);
+        int rightH=height(root.right);
+        return h+Math.max(leftH, rightH);
     }
+}
