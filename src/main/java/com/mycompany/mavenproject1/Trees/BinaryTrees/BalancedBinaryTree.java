@@ -13,6 +13,8 @@ public class BalancedBinaryTree {
     // Math.abs or MODULUS ( right height -left height ) <= 1 then it is balanced 
     // maan ke chalna hai ki balanced hai 
     
+    
+    // agr full binary tree hoga to T= T (n) join two array  + 2 * T(n/2) two small arrya sory 
     // best case nlogn and worst n^2
     public static boolean isBalanced(BinaryTreeNode<Integer> root) {
         if (root == null) {
