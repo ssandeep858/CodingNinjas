@@ -8,6 +8,17 @@ package com.mycompany.mavenproject1.Trees.BinaryTrees;
  *
  * @author ssingh
  */
+class Diameter {
+
+    int height;
+    int diameter;
+
+    public Diameter(int height, int diameter) {
+        this.diameter = diameter;
+        this.height = height;
+    }
+}
+
 public class DiameterBinaryTree {
 
     // ab agr dhyan se dekhe toh har node pr height nikalni padh rhi hai and fir diameter ki call bhi rahi hai
@@ -28,6 +39,19 @@ public class DiameterBinaryTree {
         int value2 = diameter(root.left);
         int value3 = diameter(root.right);
         return Math.max(value1, Math.max(value2, value3));
+    }
+
+    public static Diameter enhancedDiameter(BinaryTreeNode<Integer> root) {
+        if( root ==null){
+            return new Diameter(0, 0);
+        }
+        Diameter leftSide= enhancedDiameter(root.left);
+        Diameter rightSide= enhancedDiameter(root.right);
+        int height=1+Math.max(leftSide.height,rightSide.height);
+        int value1=leftSide.height+rightSide.height;
+        int value2=leftSide.diameter;
+        int value3=rightSide.diameter;
+        return new Diameter(height, Math.max(value1, Math.max(value2, value3)));
     }
 
     public static int height(BinaryTreeNode<Integer> root) {
