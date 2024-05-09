@@ -41,16 +41,18 @@ public class DiameterBinaryTree {
         return Math.max(value1, Math.max(value2, value3));
     }
 
+    // O(N)
     public static Diameter enhancedDiameter(BinaryTreeNode<Integer> root) {
-        if( root ==null){
+        if (root == null) {
             return new Diameter(0, 0);
         }
-        Diameter leftSide= enhancedDiameter(root.left);
-        Diameter rightSide= enhancedDiameter(root.right);
-        int height=1+Math.max(leftSide.height,rightSide.height);
-        int value1=leftSide.height+rightSide.height;
-        int value2=leftSide.diameter;
-        int value3=rightSide.diameter;
+        Diameter leftSide = enhancedDiameter(root.left);
+        Diameter rightSide = enhancedDiameter(root.right);
+        // abhi tak ki height bhi toh nikalni hai without height function which basically  gives 1+ left and right mein se max height 
+        int height = 1 + Math.max(leftSide.height, rightSide.height);
+        int value1 = leftSide.height + rightSide.height;
+        int value2 = leftSide.diameter;
+        int value3 = rightSide.diameter;
         return new Diameter(height, Math.max(value1, Math.max(value2, value3)));
     }
 
