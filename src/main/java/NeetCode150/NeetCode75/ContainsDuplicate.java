@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package NeetCode150.ArrayOrString;
+package NeetCode150.NeetCode75;
 
 import java.util.HashSet;
 
@@ -23,7 +23,7 @@ import java.util.HashSet;
  */
 public class ContainsDuplicate {
 
-    public boolean containsDuplicate(int[] nums) {
+    public static boolean containsDuplicate(int[] nums) {
         HashSet<Integer> set = new HashSet<>();
         for (int i = 0; i < nums.length; i++) {
             if (set.contains(nums[i])) {
@@ -33,6 +33,9 @@ public class ContainsDuplicate {
             }
         }
         return false;
+    }
+    public static void main(String[] args) {
+        System.out.println(containsDuplicate(new int[]{1,2,2,4}));
     }
 
 }

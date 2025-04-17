@@ -2,7 +2,7 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package NeetCode150.ArrayOrString;
+package NeetCode150.NeetCode75;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -48,14 +48,8 @@ public class GroupAnagrams {
             } else {
                 hashMap.put(sortedString, new ArrayList<>(Arrays.asList(currentString)));
             }
-
-//          if (!hashMap.containsKey(sortedString)) {
-//              hashMap.put(sortedString, new ArrayList<>());
-//          }
-//          hashMap.get(sortedString).add(currentString);
-//
         }
-
+//        Some initiallization rules 
 //        List<List<String>> arrayList=new ArrayList<>();
 //        for(Map.Entry<String, List<String>> map : hashMap.entrySet()){
 //            arrayList.add(map.getValue());
@@ -67,7 +61,6 @@ public class GroupAnagrams {
 //          List<String> list2= new ArrayList<>(list1);
         return new ArrayList<>(hashMap.values());
     }
-
     public static void main(String[] args) {
         List<List<String>> result = new ArrayList<>();
         result = groupAnagrams(new String[]{"eat", "tea", "tan", "ate", "nat", "bat"});

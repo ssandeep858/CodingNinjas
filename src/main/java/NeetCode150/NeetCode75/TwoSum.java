@@ -1,8 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package NeetCode150.ArrayOrString;
+package NeetCode150.NeetCode75;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -26,6 +22,8 @@ public class TwoSum {
         }
         return new int[]{-1,-1};
     }
+    
+    
     
     public static void main(String[] args) {
         int arr[]=twoSum(new int[]{3,2,4},6);

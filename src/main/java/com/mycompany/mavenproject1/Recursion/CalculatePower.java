@@ -23,7 +23,7 @@ public class CalculatePower {
         if (n == 1) {
             return x;
         }
-        return x * power(x, --n);
+        return x * power(x, n-1);
     }
 
     public static void main(String[] args) {

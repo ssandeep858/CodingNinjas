@@ -35,7 +35,7 @@ public class findDuplicate {
         for( int i=0;i<arr.length;i++){
             sum+=arr[i];
         }
-        
+        System.out.println(sum);
         for( int i=0;i<arr.length-1;i++){
             sum-=i;
         }

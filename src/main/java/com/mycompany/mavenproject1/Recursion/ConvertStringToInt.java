@@ -21,7 +21,7 @@ public class ConvertStringToInt {
         if(input.length()==1){
             return input.charAt(0)-48;
         }
-        
+        // 1234
         int temp= convertStringToInt(input.substring(1));
         System.out.println("temp is "+temp);
         int temToPower= input.length()-1;

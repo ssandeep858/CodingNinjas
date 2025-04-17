@@ -21,6 +21,6 @@ public class Multiplication {
     }
 
     public static void main(String[] args) {
-        System.out.println(multiplyTwoIntegers(5, 0));
+        System.out.println(multiplyTwoIntegers(5, 2));
     }
 }
