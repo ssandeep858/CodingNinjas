@@ -2,6 +2,7 @@ package com.mycompany.mavenproject1.Trees.BinaryTrees;
 
 public class OrderTraversal {
 
+    // No return needed as function call is already returning void
     public static void preOrder(BinaryTreeNode<Integer> root) {
         // Your code goes here
         if (root == null) {
@@ -10,7 +11,7 @@ public class OrderTraversal {
         System.out.print(root.data + " ");
         preOrder(root.left);
         preOrder(root.right);
-        return;
+        // return;
     }
 
     public static void postOrder(BinaryTreeNode<Integer> root) {
@@ -18,10 +19,10 @@ public class OrderTraversal {
         if (root == null) {
             return;
         }
-        preOrder(root.left);
-        preOrder(root.right);
+        postOrder(root.left);
+        postOrder(root.right);
         System.out.print(root.data + " ");
-        return;
+        // return;
     }
 
     public static void inOrder(BinaryTreeNode<Integer> root) {
@@ -29,10 +30,10 @@ public class OrderTraversal {
         if (root == null) {
             return;
         }
-        preOrder(root.left);
+        inOrder(root.left);
         System.out.print(root.data + " ");
-        preOrder(root.right);
-        return;
+        inOrder(root.right);
+        // return;
     }
 
 }
