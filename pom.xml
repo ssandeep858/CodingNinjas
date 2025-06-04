@@ -11,4 +11,12 @@
         <maven.compiler.target>1.8</maven.compiler.target>
         <exec.mainClass>com.mycompany.mavenproject1.Mavenproject1</exec.mainClass>
     </properties>
+
+  <dependencies>
+    <dependency>
+      <groupId>com.mattunderscore.tree.root</groupId>
+      <artifactId>trees-api</artifactId>
+      <version>0.0.8</version>
+    </dependency>
+  </dependencies>
 </project>
