@@ -1,5 +1,17 @@
 package com.mycompany.mavenproject1.Trees.BinaryTrees;
 
+class BinaryTreeNode<T> {
+    T data;
+    BinaryTreeNode<T> left;
+    BinaryTreeNode<T> right;
+
+    public BinaryTreeNode(T data) {
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
+}
+
 public class LeftDuplicateNode {
 
     /*
@@ -44,14 +56,15 @@ public class LeftDuplicateNode {
      * 2 7
      */
 
+    // simple swapping.
 
-    // simple swapping.  
     public static void insertDuplicateNode(BinaryTreeNode<Integer> root) {
         // Your code goes here
 
         if (root == null) {
             return;
         }
+
         BinaryTreeNode<Integer> newNode = new BinaryTreeNode<>(root.data);
         BinaryTreeNode<Integer> temp = root.left;
         root.left = newNode;
@@ -60,6 +73,14 @@ public class LeftDuplicateNode {
         insertDuplicateNode(root.right);
     }
 
+    // below is also correct
+    /*
+     * BinaryTreeNode<Integer> newNode=new BinaryTreeNode<>(root.data);
+     * newNode.left=root.left;
+     * root.left=newNode;
+     * insertDuplicateNode(root.left.left);
+     * insertDuplicateNode(root.right);
+     */
     // 1
     // 2 3
     // 4 5 6
