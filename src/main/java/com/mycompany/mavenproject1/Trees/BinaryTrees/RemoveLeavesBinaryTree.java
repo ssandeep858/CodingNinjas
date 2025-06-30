@@ -18,7 +18,7 @@ public class RemoveLeavesBinaryTree {
             return null;
         }
 
-        // left and right ko update krna bahot jarruri hai 
+        // left and right ko update krna bahot jarruri hai
         // as agr null return kara left ya right subTree ne toh usko update krna hoga
         root.left = removeLeaves(root.left);
         root.right = removeLeaves(root.right);
