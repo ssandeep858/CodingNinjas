@@ -48,29 +48,29 @@ Once you reach level K, all nodes in the queue are exactly K distance from the t
 
  */
 
-
-
-
 public class NodeAtDistanceK {
 
-    //          3  
-    //       5      1
-    //     6  2    0  8  
-    //       7 4
-    /* 
-    map 
-    5=3 1=3 6=5 2=5 0=1 8=1 7=2 4=2
-    **********
-    queue= 7 4 1
-    visited = 5 6 2 3 7 4 1
-    while 
-    0
-    1 
-    2
-
-
-
-    */
+    // 3
+    // 5 1
+    // 6 2 0 8
+    // 7 4
+    /*
+     * map
+     * 5=3 1=3 6=5 2=5 0=1 8=1 7=2 4=2
+     **********
+     * queue= 7 4 1
+     * visited = 5 6 2 3 7 4 1
+     * while
+     * 0
+     * 1
+     * 2
+     * You first do a level-order traversal to build a parent map.
+     * 
+     * Then you do a BFS from the target node, treating the tree like an undirected
+     * graph (child → parent, parent → child).
+     * 
+     * You track the level to find all nodes at distance K.
+     */
     public static void nodesAtDistanceK(BinaryTreeNode<Integer> root, int targetData, int k) {
         HashMap<BinaryTreeNode<Integer>, BinaryTreeNode<Integer>> parentMap = new HashMap<>();
         BinaryTreeNode<Integer> targetNode = FindTargetAndBuildParentMap(root, targetData, parentMap);
@@ -85,36 +85,56 @@ public class NodeAtDistanceK {
         visited.add(targetNode);
         int level = 0;
 
+        /*
+         * **5
+         ** / \
+         ***6 10
+         * / \
+         ** 2 3
+         ***** \
+         ****** 9
+         * Target Node: 3
+         * 
+         * K = 1( distance from node )
+         * Q 9 6
+         * V 3 9 6
+         * l= 1, s= 1 
+         * 
+         */
         while (!queue.isEmpty()) {
-            int size=queue.size();
+            int size = queue.size();
             if (level == k) {
-                for (int i = 0; i < queue.size(); i++) {
+
+                // had for loop here which failed for some reason.
+                // never do queue.size() here as when you poll the size will be dynamic and mess
+                // up your output
+                while (!queue.isEmpty()) {
                     System.out.println(queue.poll());
                 }
                 return;
             }
 
-           // never do queue.size() here as when you poll the size will be dynamic and change and mess up your output
+            // never do queue.size() here as when you poll the size will be dynamic and
+            // change and mess up your output
             for (int i = 0; i < size; i++) {
                 BinaryTreeNode<Integer> currentNode = queue.poll();
 
-                if(currentNode.left!=null && !visited.contains(currentNode.left)){
+                if (currentNode.left != null && !visited.contains(currentNode.left)) {
                     queue.add(currentNode.left);
                     visited.add(currentNode.left);
                 }
 
-                
-                if(currentNode.right!=null && !visited.contains(currentNode.right)){
+                if (currentNode.right != null && !visited.contains(currentNode.right)) {
                     queue.add(currentNode.right);
                     visited.add(currentNode.right);
                 }
 
-                BinaryTreeNode<Integer> parent=parentMap.get(currentNode);
-                if(parent!=null && !visited.contains(parent)){
+                BinaryTreeNode<Integer> parent = parentMap.get(currentNode);
+                if (parent != null && !visited.contains(parent)) {
                     queue.add(parent);
                     visited.add(parent);
                 }
-                
+
             }
             level++;
         }

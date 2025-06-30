@@ -1,5 +1,7 @@
 package com.mycompany.mavenproject1.Trees.BinaryTrees;
 
+import com.mycompany.mavenproject1.Trees.BinaryTrees.RootToNodePath.BinaryTreeNode;
+
 /*
  * For a given preorder and inorder traversal of a Binary Tree of type integer stored in an array/list, create the binary tree using the given two arrays/lists. You just need to construct the tree and return the root.
 
@@ -28,6 +30,18 @@ Sample Output 2:
 2 3 
 9 
  */
+class BinaryTreeNode<T> {
+    T data;
+    BinaryTreeNode<T> left;
+    BinaryTreeNode<T> right;
+
+    public BinaryTreeNode(T data) {
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
+}
+
 public class buildTreeInPre {
     // preOrder 1 2 4 5 3 6 7
     // inOrder 4 2 5 1 6 3 7

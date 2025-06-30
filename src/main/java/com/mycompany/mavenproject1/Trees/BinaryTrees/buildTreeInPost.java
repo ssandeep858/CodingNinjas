@@ -30,6 +30,18 @@ Sample Output 2:
 2 3 
 9 
  */
+
+ class BinaryTreeNode<T> {
+    T data;
+    BinaryTreeNode<T> left;
+    BinaryTreeNode<T> right;
+
+    public BinaryTreeNode(T data) {
+        this.data = data;
+        this.left = null;
+        this.right = null;
+    }
+}
 public class buildTreeInPost {
 
     // POST 4 5 2 6 7 3 1
