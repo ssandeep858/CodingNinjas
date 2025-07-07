@@ -25,7 +25,7 @@ class BinaryTreeNode<T> {
     }
 }
 
-public class getSum {
+public class getSum1 {
 
     public static int getSum(BinaryTreeNode<Integer> root) {
         //Your code goes here.

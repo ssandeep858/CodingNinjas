@@ -17,9 +17,9 @@ public class ELementsInRange {
 
         // 2,8
         /*
-         *   10
-         *  / \
-         *  5 15
+         * 10
+         * / \
+         * 5 15
          * / \ \
          * 2 7 20
          */

@@ -4,6 +4,8 @@
  */
 package com.mycompany.mavenproject1.Trees.BinaryTrees;
 
+import com.mycompany.mavenproject1.Trees.BinaryTrees.RootToNodePath.BinaryTreeNode;
+
 /**
  *
  * @author ssingh
