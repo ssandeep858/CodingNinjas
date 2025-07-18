@@ -1,6 +1,7 @@
 package com.mycompany.mavenproject1.HashMapsPriorityQueues;
 
 import java.util.HashMap;
+import java.util.PriorityQueue;
 
 public class LongestSubarrayZeroSum {
 
@@ -46,6 +47,17 @@ public class LongestSubarrayZeroSum {
         return maxLength;
     }
 
+    public static void inplaceHeapSort(int arr[]){
+        PriorityQueue<Integer> pq=new PriorityQueue<>((a,b)-> b-a);
+        for(int i =0;i<arr.length;i++){
+            pq.add(arr[i]);
+        }
+
+        int index = 0;
+        while (!pq.isEmpty()) {
+            arr[index++] = pq.poll();
+        }
+    }
     public static void main(String[] args) {
         System.out.println(
                 lengthOfLongestSubsetWithZeroSum(new int[] { 95, -97, -387, -435, -5, -70, 897, 127, 23, 284 }));
