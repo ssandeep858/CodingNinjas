@@ -31,43 +31,32 @@ public class AppendLastNtoFront {
     }
 
     public static Node<Integer> AppendLastNtoFront(Node<Integer> head, int n) {
-        if (head == null || head.next == null || n == 0) {
+        // Your code goes here
+        if (head == null || n == 0) {
             return head;
         }
-
-        // First, find the length to handle n >= length case
+        // 4 3
+        Node<Integer> returnHead = null;
+        Node<Integer> tail = null;
         Node<Integer> temp = head;
-        int length = 0;
-        while (temp != null) {
-            length++;
+        int count = returnLength(head);
+        // System.out.println(count);
+        while (temp.next != null) {
+
+            if (count == n + 1) {
+                tail = temp;
+                // System.out.println(tail.data);
+            }
+            if (count == n) {
+                // System.out.println(temp.data);
+                returnHead = temp;
+            }
             temp = temp.next;
+            count--;
         }
-
-        // Normalize n
-        n = n % length;
-        if (n == 0)
-            return head;
-
-        // Use two pointers with gap of n
-        Node<Integer> fast = head;
-        Node<Integer> slow = head;
-
-        // Move fast pointer n steps ahead
-        for (int i = 0; i < n; i++) {
-            fast = fast.next;
-        }
-
-        // Move both pointers until fast reaches the last node
-        while (fast.next != null) {
-            slow = slow.next;
-            fast = fast.next;
-        }
-
-        // Now slow points to newTail, fast points to tail
-        Node<Integer> newHead = slow.next;
-        slow.next = null; // Break connection
-        fast.next = head; // Connect tail to old head
-
-        return newHead;
+        temp.next = head;
+        tail.next = null;
+        return returnHead;
     }
+
 }
