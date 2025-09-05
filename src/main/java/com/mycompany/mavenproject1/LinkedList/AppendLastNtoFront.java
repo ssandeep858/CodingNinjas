@@ -30,6 +30,11 @@ public class AppendLastNtoFront {
         return count;
     }
 
+
+    // 1 2 3 4 5 
+    // 3
+    // 1 2 3 4 5 6 7 
+    // 5
     public static Node<Integer> AppendLastNtoFront(Node<Integer> head, int n) {
         // Your code goes here
         if (head == null || n == 0) {

@@ -24,6 +24,12 @@ public class isPalindrome {
         
         Node<Integer> current=slow, prev=null,next=null;
         Node<Integer> reverseHead;
+
+        // 1 2 3 4 5
+        //n= 4 5
+        // 3 -> null prev
+        // prev =curr prev = 3
+        // cur= next
         while(current!=null){
             next=current.next;
             current.next=prev;
