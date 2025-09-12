@@ -72,7 +72,7 @@ public class MinimumSquareCount {
     }
 
     // Time Complexity: O(n × √n)
-    public static int minCountDP(int n) {
+    public static int minCountDP1(int n) {
         /*
          * DP Table Example for n=5:
          * dp[0] = 0 (base case)
