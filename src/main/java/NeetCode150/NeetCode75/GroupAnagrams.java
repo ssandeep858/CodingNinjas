@@ -35,6 +35,7 @@ public class GroupAnagrams {
     public static String sortString(String input) {
         char[] temp = input.toCharArray();
         Arrays.sort(temp);
+        System.out.println(temp);
         return new String(temp);
     }
 

@@ -6,6 +6,8 @@ package NeetCode150.NeetCode75;
 
 import static java.lang.System.exit;
 
+import java.util.Arrays;
+
 /**
  *
  * @author ssingh Example 1:
@@ -55,6 +57,7 @@ public class productExceptSelf {
     }
 
     public static void main(String[] args) {
+        System.out.println("1 2 3 4");
         int res[] = productExceptSelf(new int[]{1, 2, 3, 4});
 
     }

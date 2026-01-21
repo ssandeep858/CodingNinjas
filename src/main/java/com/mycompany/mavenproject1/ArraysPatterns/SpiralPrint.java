@@ -65,5 +65,4 @@ public class SpiralPrint {
             colStart++;
         }
     }
-
 }
