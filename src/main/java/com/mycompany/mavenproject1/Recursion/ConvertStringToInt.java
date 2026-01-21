@@ -37,6 +37,6 @@ public class ConvertStringToInt {
     }
 
     public static void main(String[] args) {
-        System.out.println(convertStringToInt("00012312"));
+        System.out.println(convertStringToInt("00012"));
     }
 }
