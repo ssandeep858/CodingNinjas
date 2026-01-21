@@ -8,6 +8,8 @@ package com.mycompany.mavenproject1.Recursion;
  *
  * @author ssingh
  */
+
+// 2^n is the time complexity
 public class FindSubsequences {
     public static String[] findSubsequences(String input) {
         if (input.length() == 0) {

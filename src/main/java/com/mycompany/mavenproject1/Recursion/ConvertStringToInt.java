@@ -31,6 +31,7 @@ public class ConvertStringToInt {
         System.out.println("temp is " + temp);
         int temToPower = input.length() - 1;
         System.out.println("ten to power value is " + temToPower);
+        
         int powervariable = input.charAt(0) - 48;
         System.out.println("power variable is " + powervariable);
         return powervariable * (int) Math.pow(10, temToPower) + temp;
