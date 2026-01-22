@@ -7,11 +7,15 @@ package com.mycompany.mavenproject1.Recursion;
 /**
  *
  * @author ssingh Return Permutations - String Send Feedback Given a string S,
- * find and return all the possible permutations of the input string. Note 1 :
- * The order of permutations is not important. Note 2 : If original string
- * contains duplicate characters, permutations will also be duplicates. Input
- * Format : String S Output Format : All permutations (in different lines)
- * Sample Input : abc Sample Output : abc acb bac bca cab cba
+ *         find and return all the possible permutations of the input string.
+ *         Note 1 :
+ *         The order of permutations is not important. Note 2 : If original
+ *         string
+ *         contains duplicate characters, permutations will also be duplicates.
+ *         Input
+ *         Format : String S Output Format : All permutations (in different
+ *         lines)
+ *         Sample Input : abc Sample Output : abc acb bac bca cab cba
  */
 public class PermutationOfString {
 
@@ -22,16 +26,17 @@ public class PermutationOfString {
 
         return i * fact(i - 1);
     }
+
     // MUSHKILL LAGA THA TEKO REVISE KRLE
     public static String[] permutationOfString(String input) {
         if (input.length() == 0) {
-            return new String[]{""};
+            return new String[] { "" };
         }
         String res[] = new String[fact(input.length())];
         int k = 0;
         for (int i = 0; i < input.length(); i++) {
             // bc ac ab
-            // c b  
+            // c b
             String subSubstring = input.substring(0, i) + input.substring(i + 1);
             String smallOutput[] = permutationOfString(subSubstring);
 

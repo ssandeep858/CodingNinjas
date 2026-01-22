@@ -30,10 +30,9 @@ public class AppendLastNtoFront {
         return count;
     }
 
-
-    // 1 2 3 4 5 
+    // 1 2 3 4 5
     // 3
-    // 1 2 3 4 5 6 7 
+    // 1 2 3 4 5 6 7
     // 5
     public static Node<Integer> AppendLastNtoFront(Node<Integer> head, int n) {
         // Your code goes here
@@ -62,6 +61,35 @@ public class AppendLastNtoFront {
         temp.next = head;
         tail.next = null;
         return returnHead;
+    }
+
+    public static Node<Integer> AppendLastNtoFrontEnhanced(Node<Integer> head, int n) {
+        if(head==null || n==0){
+            return head;
+        }
+
+        Node<Integer> slow=head;
+        Node<Integer> fast=head;
+
+        for(int i=0;i<n;i++){
+            if(fast==null){
+                // list khatam 
+                return head;
+            }
+            fast=fast.next;
+        }
+
+        while(fast.next!=null){
+            slow=slow.next;
+            fast=fast.next;
+        }
+
+        Node<Integer> returnHead;
+        returnHead=slow.next;
+        slow.next=null;
+        fast.next=head;
+        return returnHead;
+    
     }
 
 }
