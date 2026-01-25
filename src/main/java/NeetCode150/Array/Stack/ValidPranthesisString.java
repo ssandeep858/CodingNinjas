@@ -46,6 +46,7 @@ public class ValidPranthesisString {
 
     public static boolean checkValidString(String s) {
         int leftMin = 0, leftMax = 0;
+        // Input: s = "(*))"
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == '(') {
                 leftMin++;
@@ -54,9 +55,9 @@ public class ValidPranthesisString {
                 leftMin--;
                 leftMax--;
             } else {
-                // if start was wrtten as )
+                // if it is (  so it increases open (
                 leftMax++;
-                // if star was written as (
+                // leftMin = minimum possible number of open ( at this point and ')' closes one '('
                 leftMin--;
             }
 

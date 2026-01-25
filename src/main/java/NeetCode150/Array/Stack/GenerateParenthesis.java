@@ -5,7 +5,6 @@
 package NeetCode150.Array.Stack;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 /**
