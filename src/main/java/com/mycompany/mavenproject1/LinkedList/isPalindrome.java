@@ -42,7 +42,7 @@ public class isPalindrome {
         System.out.println("correct is ");
         InsertDeleteNode.print(head);
         while(head!=null && reverseHead !=null){
-            if(head.data!=reverseHead.data){
+            if(!head.data.equals(reverseHead.data)){
                 return false;
             }
             reverseHead=reverseHead.next;
