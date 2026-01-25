@@ -4,18 +4,44 @@
  */
 package NeetCode150.Array.Stack;
 
-/**
- *
- * @author ssingh Example 1:
- *
- * Input: s = "()" Output: true Example 2:
- *
- * Input: s = "(*)" Output: true Example 3:
- *
- * Input: s = "(*))" Output: true
- *
- * Input s = "(" Output false Expected false
- */
+/*
+ LeetCode 678 — Valid Parenthesis String
+
+ You are given a string s containing only three types of characters:
+ '(' , ')' , and '*'.
+
+ The '*' character can represent any of the following:
+   - '('
+   - ')'
+   - an empty string ""
+
+ A string is valid if:
+   1. Every '(' has a matching ')'.
+   2. Every ')' has a matching '('.
+   3. Parentheses are properly nested.
+
+ Return true if the string can be made valid by replacing each '*' with
+ either '(' , ')' , or empty. Otherwise return false.
+
+ Examples:
+
+ Input: s = "()"
+ Output: true
+
+ Input: s = "(*)"
+ Output: true
+
+ Input: s = "(*))"
+ Output: true
+
+ Input: s = "("
+ Output: false
+
+ Constraints:
+ 1 <= s.length <= 100000
+ s contains only '(', ')', '*'
+*/
+
 public class ValidPranthesisString {
 
     public static boolean checkValidString(String s) {
@@ -37,7 +63,7 @@ public class ValidPranthesisString {
             if (leftMin < 0) {
                 leftMin = 0;
             }
-            
+
             // this means ) came first or more often
             if (leftMax < 0) {
                 return false;

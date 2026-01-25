@@ -11,9 +11,9 @@ import static NeetCode150.LinkedList.mergeTwoLists.printNodes;
  *
  * @author ssingh Input: head = [1,2,3,4,5], n = 2 Output: [1,2,3,5] Example 2:
  *
- * Input: head = [1], n = 1 Output: [] Example 3:
+ *         Input: head = [1], n = 1 Output: [] Example 3:
  *
- * Input: head = [1,2], n = 1 Output: [1]
+ *         Input: head = [1,2], n = 1 Output: [1]
  */
 public class removeNthFromEnd {
 
@@ -24,12 +24,16 @@ public class removeNthFromEnd {
 
         ListNode slow = new ListNode(0, head), fast = head;
         // ek node peeche se chalengein
+
+        // dummy solves for an important edge case that if we have to remove 1 in
+        // [1,2,3]
+        // as head will be dettached after removing and we cannot return that.
         ListNode dummy = slow;
         while (n > 0 && fast != null) {
             fast = fast.next;
             n -= 1;
         }
-        // 0 1 2 
+        // 0 1 2
         while (fast != null) {
             slow = slow.next;
             fast = fast.next;
