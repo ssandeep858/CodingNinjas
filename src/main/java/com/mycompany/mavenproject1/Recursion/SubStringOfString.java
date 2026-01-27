@@ -21,6 +21,7 @@ public class SubStringOfString {
         }
     }
 
+    // count n(n+1)/2
     public static void subStringsSlidingWindow(String word) {
         int count = 0;
         int startWindow = 0, endWindow = 1;
@@ -31,14 +32,14 @@ public class SubStringOfString {
                 count++;
             }
             System.out.println(word.subSequence(startWindow, endWindow++));
-            //for empty array
+            // for empty array
             if (startWindow == word.length() - 1) {
-                System.out.println(word.subSequence(startWindow + 1, endWindow-1));
+                System.out.println(word.subSequence(startWindow + 1, endWindow - 1));
             }
         }
     }
 
-    //  0 2
+    // 0 2
     public static void main(String[] args) {
         subStringsSlidingWindow("xyz");
     }

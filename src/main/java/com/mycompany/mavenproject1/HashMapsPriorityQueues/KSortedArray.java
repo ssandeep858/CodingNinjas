@@ -16,7 +16,6 @@ Return or print the sorted array.
 public class KSortedArray {
     public static void KSortedArr(int[] arr, int k) {
         PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> a - b);
-        int size = 0;
         for (int i = 0; i < k; i++) {
             pq.add(arr[i]);
         }

@@ -59,6 +59,8 @@ public class SubsetsOfArray {
         }
         for (int i = 0; i < smallerOutput.length; i++) {
             res[i+smallerOutput.length] = new int[smallerOutput[i].length + 1];
+            //[2, ?]
+            //[2, ?]
             res[i+smallerOutput.length][0] = input[startIndex];
             for (int j = 1; j <= smallerOutput[i].length; j++) {
                 res[i+smallerOutput.length][j] = smallerOutput[i][j - 1];
