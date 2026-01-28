@@ -47,17 +47,6 @@ public class LongestSubarrayZeroSum {
         return maxLength;
     }
 
-    public static void inplaceHeapSort(int arr[]) {
-        PriorityQueue<Integer> pq = new PriorityQueue<>((a, b) -> b - a);
-        for (int i = 0; i < arr.length; i++) {
-            pq.add(arr[i]);
-        }
-
-        int index = 0;
-        while (!pq.isEmpty()) {
-            arr[index++] = pq.poll();
-        }
-    }
 
     public static void main(String[] args) {
         System.out.println(

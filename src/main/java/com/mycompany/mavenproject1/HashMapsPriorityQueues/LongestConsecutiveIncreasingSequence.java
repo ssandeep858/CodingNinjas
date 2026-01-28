@@ -65,6 +65,7 @@ public class LongestConsecutiveIncreasingSequence {
         ArrayList<Integer> res = longestConsecutiveIncreasingSequence(
                 new int[] { 2, 12, 9, 16, 10, 5, 3, 20, 25, 11, 1, 8, 6
                 });
+
         System.out.println(res);
     }
 }
