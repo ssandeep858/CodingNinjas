@@ -11,7 +11,6 @@ public class OrderTraversal {
         System.out.print(root.data + " ");
         preOrder(root.left);
         preOrder(root.right);
-        // return;
     }
 
     public static void postOrder(BinaryTreeNode<Integer> root) {
@@ -22,7 +21,6 @@ public class OrderTraversal {
         postOrder(root.left);
         postOrder(root.right);
         System.out.print(root.data + " ");
-        // return;
     }
 
     public static void inOrder(BinaryTreeNode<Integer> root) {
@@ -33,7 +31,6 @@ public class OrderTraversal {
         inOrder(root.left);
         System.out.print(root.data + " ");
         inOrder(root.right);
-        // return;
     }
 
 }

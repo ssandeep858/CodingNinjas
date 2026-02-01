@@ -40,7 +40,7 @@ public class ContainsElement {
     }
 
     public static boolean checkIfContainsX(TreeNode<Integer> root, int x) {
-
+        
         // Write your code here
         if (root == null) {
             return false;
