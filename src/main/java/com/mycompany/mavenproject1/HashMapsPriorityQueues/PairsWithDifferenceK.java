@@ -28,6 +28,23 @@ import java.util.Map;
 
 public class PairsWithDifferenceK {
 
+    public static int getPairsWithDifferenceKEnhanced(int arr[], int k) {
+        int count = 0;
+        HashMap<Integer, Integer> hashMap = new HashMap<>();
+
+        // b=x-k
+        for (int i = 0; i < arr.length; i++) {
+            count += hashMap.getOrDefault(arr[i] - k, 0);
+
+            if (k != 0) {
+                count += hashMap.getOrDefault(arr[i] + k, 0);
+            }
+            hashMap.put(arr[i], hashMap.getOrDefault(arr[i], 0) + 1);
+        }
+        return count;
+
+    }
+
     // |a - b| = K ➜ a - b = K OR a - b = -K
     public static int getPairsWithDifferenceK(int arr[], int k) {
         // Write your code here
@@ -61,7 +78,7 @@ public class PairsWithDifferenceK {
     }
 
     public static void main(String[] args) {
-        System.out.println(getPairsWithDifferenceK(new int[] { 5, 1, 2, 2, 4 }, 3));
+        System.out.println(getPairsWithDifferenceKEnhanced(new int[] { 5,1,2,2,4}, 3));
     }
 
 }

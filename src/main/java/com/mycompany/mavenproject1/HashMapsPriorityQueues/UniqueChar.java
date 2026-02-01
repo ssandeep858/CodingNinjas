@@ -20,16 +20,16 @@ public class UniqueChar {
 
     public static String uniqueChar(String str) {
         HashMap<Character,Integer> hashMap=new HashMap<>();
-        String res="";
+        StringBuilder stringBuilder= new StringBuilder();
         for(int i=0;i<str.length();i++){
             if(!hashMap.containsKey(str.charAt(i))){
                 hashMap.put(str.charAt(i), hashMap.getOrDefault(str.charAt(i), 0)+1);
                 System.out.println("inside "+ str.charAt(i));
                 System.out.println(hashMap);
-                res+=str.charAt(i);
+                stringBuilder.append(str.charAt(i));
             }
         }
-        return res;
+        return stringBuilder.toString();
     }
     public static void main(String[] args) {
         System.out.println(uniqueChar("ababacd"));

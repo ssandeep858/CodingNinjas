@@ -4,8 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.PriorityQueue;
 
-/*
- * Given k no. of different size arrays, which are sorted individually (in ascending order). You need to merge all the given arrays such that output array should be sorted (in ascending order).
+/* Given k no. of different size arrays,
+ which are sorted individually (in ascending order).
+  You need to merge all the given arrays such that output array should be sorted (in ascending order).
 
 Hint : Use Heaps.
 Detailed explanation ( Input/output format, Notes, Images )

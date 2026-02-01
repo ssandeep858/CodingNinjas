@@ -1,5 +1,6 @@
 package com.mycompany.mavenproject1.HashMapsPriorityQueues;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.PriorityQueue;
@@ -50,9 +51,73 @@ public class TicketSelling {
      * Sample Output 2 :
      * 4
      */
-
+    // 222
     // The Problem: Multiple people can have the SAME priority as you!
     // You need to track which specific person is you, not just the priority value:
+
+    public static int buyTickeTEnhanced(int input[], int k) {
+        PriorityQueue<Integer> priorityQueue = new PriorityQueue<>((a, b) -> b - a);
+        LinkedList<int[]> linkedList = new LinkedList<>();
+        boolean hasServed = false;
+        int time = 0;
+        for (int i = 0; i < input.length; i++) {
+            priorityQueue.add(input[i]);
+            linkedList.add(new int[] { input[i], i });
+        }
+
+        while (!hasServed) {
+            int currentHighestPriority = priorityQueue.peek();
+            int currentFrontQueueELementPair[] = linkedList.peek();
+            if (currentFrontQueueELementPair[0] == currentHighestPriority) {
+                if (currentFrontQueueELementPair[1] == k) {
+                    hasServed = true;
+                }
+                time++;
+                linkedList.poll();
+                priorityQueue.poll();
+
+            } else {
+                linkedList.add(linkedList.poll());
+            }
+        }
+
+        return time;
+    }
+
+    public static int buyTicketWRONGSOLUTION(int input[], int k) {
+        PriorityQueue<int[]> priorityQueue = new PriorityQueue<>((a, b) -> b[0] - a[0]);
+        LinkedList<Integer> linkedList = new LinkedList<>();
+
+        for (int i = 0; i < input.length; i++) {
+            priorityQueue.add(new int[] { input[i], i });
+            linkedList.add(input[i]);
+        }
+
+        int time = 0;
+        boolean broughtTicket = false;
+
+        while (!broughtTicket) {
+            if (priorityQueue.peek()[0] == linkedList.peek()) {
+                if (priorityQueue.peek()[1] == k) {
+                    // THIS IS WHERE CODE GOES WRONG
+                    // WHEN WE HAVE (2,0),(2,2),(2,3) THEN AS PER PQ ANY 2 CAN BE POPPED/PEEK SO OUR
+                    // RESULT COMES WRONG.
+                    time++;
+                    broughtTicket = true;
+                } else {
+                    int d[] = priorityQueue.poll();
+                    int d2 = linkedList.poll();
+                    time++;
+                }
+            } else {
+                int temp = linkedList.poll();
+                linkedList.add(temp);
+            }
+        }
+
+        return time;
+    }
+
     public static int buyTicket(int input[], int k) {
         int myPriority = input[k];
         LinkedList<Boolean> isTarget = new LinkedList<>();
@@ -92,7 +157,7 @@ public class TicketSelling {
     }
 
     public static void main(String[] args) {
-        System.out.println(buyTicket(new int[] { 2, 3, 2, 2, 4 }, 3));
+        System.out.println(buyTickeTEnhanced(new int[] { 2, 3, 2, 2, 4 }, 3));
     }
     /*
      * 3 ,9 ,4

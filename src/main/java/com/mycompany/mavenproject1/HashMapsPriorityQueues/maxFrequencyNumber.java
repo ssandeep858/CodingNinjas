@@ -17,7 +17,7 @@ public class maxFrequencyNumber {
         HashMap<Integer, Integer> HashMap = new HashMap<>();
         for (int i = 0; i < arr.length; i++) {
             if (HashMap.containsKey(arr[i])) {
-                HashMap.put(arr[i], HashMap.get(arr[i]) + 1);
+                HashMap.put(arr[i], HashMap.getOrDefault(arr[i], 0)+1);
             } else {
                 HashMap.put(arr[i], 1);
             }

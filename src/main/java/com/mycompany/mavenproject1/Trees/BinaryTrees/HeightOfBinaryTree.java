@@ -9,17 +9,16 @@ package com.mycompany.mavenproject1.Trees.BinaryTrees;
  * @author ssingh
  */
 
-
 public class HeightOfBinaryTree {
 
     public static int height(BinaryTreeNode<Integer> root) {
-        //Your code goes here
+        // Your code goes here
         if (root == null) {
             return 0;
         }
         int h = 1;
-        int leftH=height(root.left);
-        int rightH=height(root.right);
-        return h+Math.max(leftH, rightH);
+        int leftH = height(root.left);
+        int rightH = height(root.right);
+        return h + Math.max(leftH, rightH);
     }
 }
