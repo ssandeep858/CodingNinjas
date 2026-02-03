@@ -31,7 +31,7 @@ Sample Output 2:
 9 
  */
 
- class BinaryTreeNode<T> {
+class BinaryTreeNode<T> {
     T data;
     BinaryTreeNode<T> left;
     BinaryTreeNode<T> right;
@@ -42,6 +42,7 @@ Sample Output 2:
         this.right = null;
     }
 }
+
 public class buildTreeInPost {
 
     // POST 4 5 2 6 7 3 1
@@ -64,6 +65,7 @@ public class buildTreeInPost {
                 break;
             }
         }
+        System.out.println("root index is " + rootIndex);
         if (rootIndex == -1) {
             return null;
         }
@@ -74,9 +76,10 @@ public class buildTreeInPost {
         int leftPostE = leftInE - leftInS + leftPostS;
         int rightInS = rootIndex + 1;
         int rightInE = inE;
+        //
         int rightPostS = leftPostE + 1;
-        int rightPostE = pE-1;
-        //-1 ver very important as last one is root 
+        int rightPostE = pE - 1;
+        // -1 ver very important as last one is root
 
         root.left = buildTreeHelper(postOrder, inOrder, leftInS, leftInE, leftPostS, leftPostE);
         root.right = buildTreeHelper(postOrder, inOrder, rightInS, rightInE, rightPostS, rightPostE);

@@ -2,7 +2,7 @@
     * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
     * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
     */
-    package TreesOrGraphs;
+    package NeetCode150.TreesOrGraphs;
 
     //import com.sun.javafx.scene.control.skin.VirtualFlow;
     import java.util.*;

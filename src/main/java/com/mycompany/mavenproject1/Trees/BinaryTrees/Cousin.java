@@ -22,10 +22,8 @@ class BinaryTreeNode<T> {
  * 
  * Do it in O(n).
  */
-public class Cousin {
-
     // ✅ Helper class to store parent and height (level) for each node
-    static class NodeInfo {
+class NodeInfo {
         int height; // Level (depth) in the tree
         BinaryTreeNode<Integer> parent; // Parent node reference
 
@@ -34,6 +32,10 @@ public class Cousin {
             this.parent = parent;
         }
     }
+
+public class Cousin {
+
+
 
     public static boolean isCousin(BinaryTreeNode<Integer> root, int p, int q) {
         if (root == null)

@@ -13,7 +13,7 @@ The binary tree will be consisting of only unique elements.
 public class LargestBst {
 
     // ✅ Subtree info container: holds data for each subtree
-    public static class BstInfo {
+    static class BstInfo {
         int min; // Minimum value in this subtree
         int max; // Maximum value in this subtree
         int height; // Height of the largest BST in this subtree

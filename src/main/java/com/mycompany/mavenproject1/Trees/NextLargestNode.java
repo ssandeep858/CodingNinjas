@@ -4,11 +4,26 @@
  */
 package com.mycompany.mavenproject1.Trees;
 
+import java.util.ArrayList;
+
 /**
  *
- * @author ssingh
+ * @author ssingh Find and return the node whose value is the smallest number
+ *         that is STRICTLY greater than n.
+ *         min( all node values that are > n )
+ * 
  */
 public class NextLargestNode {
+    class TreeNode<T> {
+
+        T data;
+        ArrayList<TreeNode<T>> children;
+
+        TreeNode(T data) {
+            this.data = data;
+            children = new ArrayList<TreeNode<T>>();
+        }
+    }
 
     public static TreeNode<Integer> findNextLargerNode(TreeNode<Integer> root, int n) {
         // Write your code here

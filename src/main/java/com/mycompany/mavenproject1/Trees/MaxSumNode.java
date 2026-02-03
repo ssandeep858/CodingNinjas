@@ -8,7 +8,22 @@ import java.util.ArrayList;
 
 /**
  *
- * @author ssingh
+ * @author ssingh * Problem: Maximum Sum Node in a Generic Tree
+ *
+ *         You are given a generic tree where each node can have multiple
+ *         children.
+ *         Each node contains an integer value.
+ *
+ *         For every node, define its sum as:
+ *         node.data + sum of data of all its immediate children.
+ *
+ *         Your task is to find and return the node for which this sum is
+ *         maximum.
+ *
+ *         Note:
+ *         - Only direct children are considered (not grandchildren).
+ *         - If multiple nodes have the same maximum sum, return any one of
+ *         them.
  */
 public class MaxSumNode {
 
@@ -35,29 +50,28 @@ public class MaxSumNode {
     }
 
     public static Pair helper(TreeNode<Integer> root) {
-        if(root==null){
+        if (root == null) {
             return new Pair(null, 0);
         }
-        int sum=root.data;
-        for(int i=0;i<root.children.size();i++){
-           sum+=root.children.get(i).data;
+        int sum = root.data;
+        for (int i = 0; i < root.children.size(); i++) {
+            sum += root.children.get(i).data;
         }
-        Pair curr=new Pair(root, sum);
-        
-        for(int i=0;i<root.children.size();i++){
-            Pair child=helper(root.children.get(i));
-            
-            if(child.sum>curr.sum){
-                curr.maxNode=child.maxNode;
-                curr.sum=child.sum;
+        Pair curr = new Pair(root, sum);
+
+        for (int i = 0; i < root.children.size(); i++) {
+            Pair child = helper(root.children.get(i));
+
+            if (child.sum > curr.sum) {
+                curr.maxNode = child.maxNode;
+                curr.sum = child.sum;
             }
         }
         return curr;
     }
-    
 
     public static TreeNode<Integer> maxSumNode(TreeNode<Integer> root) {
-        Pair res=helper(root);
+        Pair res = helper(root);
         return res.maxNode;
     }
 

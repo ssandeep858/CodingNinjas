@@ -1,4 +1,4 @@
-package TreesOrGraphs;
+package NeetCode150.TreesOrGraphs;
 
 import java.util.ArrayList;
 import java.util.Arrays;

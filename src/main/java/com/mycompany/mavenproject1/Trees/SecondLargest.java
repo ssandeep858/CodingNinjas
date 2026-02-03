@@ -20,8 +20,6 @@ public class SecondLargest {
 
     public static TreeNode<Integer> findSecondLargest(TreeNode<Integer> root) {
         // Write your code here
-
-        
         
         if (root == null) {
             return null;

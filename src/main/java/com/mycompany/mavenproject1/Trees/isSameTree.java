@@ -8,27 +8,43 @@ package com.mycompany.mavenproject1.Trees;
  *
  * @author ssingh
  */
+
+class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+
+    TreeNode() {
+    }
+
+    TreeNode(int val) {
+        this.val = val;
+    }
+
+    TreeNode(int val, TreeNode left, TreeNode right) {
+        this.val = val;
+        this.left = left;
+        this.right = right;
+    }
+}
+
 public class isSameTree {
 
-    public static boolean checkIdentical(TreeNode<Integer> root1, TreeNode<Integer> root2) {
-
-        // Write your code here
-        if (root1 == null && root2 == null) {
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        // If both are null, they are identical
+        if (p == null && q == null)
             return true;
-        }
-        if ((root1 == null && root2 != null) || (root1 != null && root2 == null)) {
+
+        // If one is null and the other is not, not identical
+        if (p == null || q == null)
             return false;
-        }
-        if (root1.data != root2.data) {
+
+        // If values differ, not identical
+        if (p.val != q.val)
             return false;
-        }
-        if (root1.children.size() != root2.children.size()) {
-            return false;
-        }
-        for (int i = 0; i < root1.children.size(); i++) {
-            return checkIdentical(root1.children.get(i), root2.children.get(i));
-        }
-        return true;
+
+        // Both values same: check left and right subtrees
+        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
     }
 
 }
