@@ -17,6 +17,16 @@ public class RootToNodePath {
         }
     }
 
+    /*
+     * Given a binary tree and a value data:
+     * 
+     * 👉 Find the node containing data
+     * 👉 Return an ArrayList<Integer> representing the path from that node up to
+     * the root
+     * 
+     * If the node does not exist, return null.
+     */
+
     public static ArrayList<Integer> getPath(BinaryTreeNode<Integer> root, int data) {
 
         if (root == null) {
