@@ -13,16 +13,25 @@ public class SortedArrayToSubTree {
         return SortedArrayToBSTHelper(arr, 0, n - 1);
     }
 
+    // 0 1 2 3 4 5 6 7 8 9
+    // start = 4
+    // end = 9
+    // [ index 4,5,6,7,8,9 ]
+    // mid = 2 which would be wrong
+    // start + (end - start)/2
+    // 4 + 2 = 6 which would be correct
+
     private static BinaryTreeNode<Integer> SortedArrayToBSTHelper(int[] arr, int start, int end) {
         if (start > end) {
             return null;
         }
-        //int mid = (end - start) / 2;
-        //This gives the index relative to the start, not the absolute index in the array.
+        // int mid = (end - start) / 2;
+        // This gives the index relative to the start, not the absolute index in the
+        // array.
         int mid = start + (end - start) / 2;
-        BinaryTreeNode<Integer> root=new BinaryTreeNode<Integer>(arr[mid]);
-        root.left=SortedArrayToBSTHelper(arr, start, mid-1);
-        root.right=SortedArrayToBSTHelper(arr, mid+1,end);
+        BinaryTreeNode<Integer> root = new BinaryTreeNode<Integer>(arr[mid]);
+        root.left = SortedArrayToBSTHelper(arr, start, mid - 1);
+        root.right = SortedArrayToBSTHelper(arr, mid + 1, end);
         return root;
     }
 

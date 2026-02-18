@@ -14,6 +14,9 @@ public class isBST {
      * / \ \
      * 2 7 20
      */
+    // This only compares immediate children.
+    // But BST rules are global, not local.
+
     public static boolean isBST(BinaryTreeNode<Integer> root) {
         return isBstHelper(root, Integer.MIN_VALUE, Integer.MAX_VALUE);
     }
@@ -23,7 +26,7 @@ public class isBST {
             return true;
         }
 
-        if(!(root.data>min && root.data <max)){
+        if (!(root.data > min && root.data < max)) {
             return false;
         }
 

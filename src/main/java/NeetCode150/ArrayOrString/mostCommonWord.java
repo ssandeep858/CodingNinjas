@@ -22,7 +22,8 @@ public class mostCommonWord {
         }
 
         // replace all non words => \\w+
-        // [^a-zA-Z] which are not words
+        // [^a-zA-Z] which are not wordssout    
+
         String words[] = paragraph.toLowerCase().split("[^a-zA-Z]");
         for (String currentString : words) {
             System.out.println(currentString);

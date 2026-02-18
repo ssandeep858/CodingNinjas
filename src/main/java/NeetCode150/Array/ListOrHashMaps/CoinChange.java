@@ -11,12 +11,13 @@ import java.util.List;
  *
  * @author ssingh Example 1:
  *
- * Input: coins = [1,2,5], amount = 11 Output: 3 Explanation: 11 = 5 + 5 + 1
- * Example 2:
+ *         Input: coins = [1,2,5], amount = 11 Output: 3 Explanation: 11 = 5 + 5
+ *         + 1
+ *         Example 2:
  *
- * Input: coins = [2], amount = 3 Output: -1 Example 3:
+ *         Input: coins = [2], amount = 3 Output: -1 Example 3:
  *
- * Input: coins = [1], amount = 0 Output: 0
+ *         Input: coins = [1], amount = 0 Output: 0
  */
 public class CoinChange {
 
@@ -34,7 +35,7 @@ public class CoinChange {
             minCoins[i] = Integer.MAX_VALUE;
             for (int j = 0; j < coins.length; j++) {
                 if (coins[j] <= i && minCoins[i - coins[j]] != Integer.MAX_VALUE) {
-                    // 5 1 ke sikke and 1 5 ka sikka 
+                    // 5 1 ke sikke and 1 5 ka sikka
                     minCoins[i] = Math.min(minCoins[i], 1 + minCoins[i - coins[j]]);
                 }
             }
@@ -47,11 +48,9 @@ public class CoinChange {
     }
 
     public static void main(String[] args) {
-        System.out.println(coinChange(new int[]{186, 419, 83, 408}, 6249));
+        System.out.println(coinChange(new int[] { 186, 419, 83, 408 }, 6249));
     }
 }
-
-
 
 class Result {
 
@@ -82,8 +81,8 @@ class Result {
     // 6 => 4
     // 8 => 6
     // 2 -2
-// n >1 and <10^5
-// arr  of size n 
+    // n >1 and <10^5
+    // arr of size n
     public static int findLowestStartingStair(List<Integer> jumps, int index, int stairValue) {
         if (index == jumps.size()) {
             return stairValue;
@@ -93,4 +92,3 @@ class Result {
         return findLowestStartingStair(jumps, index + 1, newStairValue);
     }
 }
-

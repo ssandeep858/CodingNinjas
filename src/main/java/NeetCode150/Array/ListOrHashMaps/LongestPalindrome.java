@@ -10,6 +10,7 @@ package NeetCode150.Array.ListOrHashMaps;
  */
 public class LongestPalindrome {
 
+    // manchester algorithm for O(n) but this is n2 worst but average and best O(n)
     public static String longestPalindrome(String s) {
 
         int start = 0;

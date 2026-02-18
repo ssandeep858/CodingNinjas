@@ -57,6 +57,8 @@ public class isPalindrome {
         if(input.length()==0){
             return true;
         }
+        input =input.toLowerCase();
+        System.out.println(input);
         int left=0,right=input.length()-1;
         while(left<right){
             if(!isAlphaNumeric(input.charAt(left))){

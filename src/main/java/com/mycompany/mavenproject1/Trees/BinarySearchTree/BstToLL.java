@@ -118,7 +118,8 @@ public class BstToLL {
         LinkedListNode<Integer> current = new LinkedListNode<Integer>(root.data);
 
         current.next = headSoFar;
-
+        // see here we are not passing headSoFar but current coz current se pehle attach
+        // krne hai nodes
         return constructLinkedListHelper(root.left, current);
     }
 
@@ -136,7 +137,7 @@ public class BstToLL {
         if (root == null) {
             return;
         }
-
+        
         inOrder(root.left);
         LinkedListNode<Integer> current = new LinkedListNode<Integer>(root.data);
         if (prev == null) {
