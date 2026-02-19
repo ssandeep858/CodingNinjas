@@ -40,7 +40,7 @@ public class MaximunBudget {
     }
 
     public static void main(String[] args) {
-        System.out.println(maximumProfit(new int[]{34, 78, 90, 15, 67}));
+        System.out.println(maximumProfit(new int[] { 34, 78, 90, 15, 67 }));
     }
 
 }

@@ -26,6 +26,9 @@ public class LongestPalindrome {
             if (len > end - start) {
                 System.out.println("inside condition");
                 // racecar and i is at e i.e. 3
+                // a b b a
+                // 0 1 2 3
+                // start mein len -1 for even case of palindrome.
                 start = i - ((len - 1) / 2);
                 end = i + (len / 2);
             }

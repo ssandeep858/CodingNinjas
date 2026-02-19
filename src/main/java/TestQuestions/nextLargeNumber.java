@@ -65,6 +65,7 @@ public class nextLargeNumber {
             System.out.println("temp value after" + temp.data);
             temp = temp.next;
         }
+        
         if (carry == 1) {
             head = reverseList(head);
             LinkedListNode<Integer> newNode = new LinkedListNode<>(1);

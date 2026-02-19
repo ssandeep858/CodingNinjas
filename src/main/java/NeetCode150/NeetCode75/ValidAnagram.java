@@ -41,6 +41,7 @@ public class ValidAnagram {
             hashMap1.put(s.charAt(i), hashMap1.getOrDefault(s.charAt(i), 0) + 1);
 
         }
+        
         for (int i = 0; i < t.length(); i++) {
             if (hashMap2.containsKey(t.charAt(i))) {
                 hashMap2.put(t.charAt(i), hashMap2.get(t.charAt(i)) + 1);

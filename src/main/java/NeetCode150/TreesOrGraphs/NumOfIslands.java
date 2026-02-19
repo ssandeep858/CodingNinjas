@@ -8,6 +8,35 @@ package NeetCode150.TreesOrGraphs;
  *
  * @author ssingh
  */
+/*
+ * 🏝️ Number of Islands (LeetCode 200)
+ *
+ * Problem:
+ * Given a 2D grid of '1's (land) and '0's (water),
+ * return the number of islands.
+ *
+ * Definition of an Island:
+ * - An island is a group of connected '1' cells.
+ * - Connections are allowed only horizontally and vertically (4-directional).
+ * - Diagonal connections do NOT count.
+ * - The island is surrounded by water ('0') or grid boundaries.
+ *
+ * Approach (DFS / Flood Fill):
+ * - Traverse each cell in the grid.
+ * - When a '1' is found:
+ * -> Increment island count.
+ * -> Perform DFS to mark all connected land cells as visited (convert to '0').
+ * - Continue scanning until entire grid is processed.
+ *
+ * Why mark visited as '0'?
+ * - To avoid counting the same island multiple times.
+ *
+ * Time Complexity: O(m × n)
+ * Each cell is visited at most once.
+ *
+ * Space Complexity: O(m × n) (worst-case recursion stack)
+ */
+
 public class NumOfIslands {
 
     public static int numIslands(char[][] grid) {

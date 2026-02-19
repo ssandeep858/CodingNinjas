@@ -2,6 +2,7 @@ package com.mycompany.mavenproject1.HashMapsPriorityQueues;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Collection;
 import java.util.PriorityQueue;
 
 /* Given k no. of different size arrays,
@@ -54,7 +55,7 @@ public class MergeKSortedArrays {
                 currentArrayIndex[i] = 1;
             }
         }
-
+        
         while (!priorityQueue.isEmpty()) {
             int currentMinElementData[] = priorityQueue.poll();
             int minElement = currentMinElementData[0];

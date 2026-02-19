@@ -12,7 +12,9 @@ import java.util.TreeMap;
         System.out.println("  ceilingKey(25) = 30 → [Greater than or equal to 25]");
         System.out.println("  higherKey(25) = 30  → [Strictly greater than 25]");
  */
-
+//words = ["do","dont","no","not","note","notes","den"]
+//prefix = "no"
+//Return all words that start with the given prefix.
 public class AutoComplete {
     public static List<String> autoComplete(String[] words, String prefix) {
         System.out.println("\n=== DETAILED TREEMAP AUTO-COMPLETE ===");
@@ -30,6 +32,7 @@ public class AutoComplete {
             wordMap.put(word, true);
             System.out.println("  Added: " + word);
         }
+        System.out.println(wordMap);
         System.out.println("Sorted words in TreeMap: " + wordMap.keySet());
 
         // Find the range for prefix matching
@@ -51,6 +54,7 @@ public class AutoComplete {
         System.out.println("  Higher key (first non-match): " + higherKey);
         // System.out.println("Ceiling and Higher wala mehtod " +
         // wordMap.subMap(ceilingKey, higherKey));
+
         return new ArrayList<>(prefixMap.keySet());
     }
 

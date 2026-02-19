@@ -52,6 +52,8 @@ public class KEmpltySlots {
 
     public int kEmptySlots(int[] bulbs, int k) {
         TreeSet<Integer> on = new TreeSet<>();
+        // bulbs = [5, 1, 3, 2, 4]
+        // k = 3
 
         for (int day = 0; day < bulbs.length; day++) {
             int pos = bulbs[day];

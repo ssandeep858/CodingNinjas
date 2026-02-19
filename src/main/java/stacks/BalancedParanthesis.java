@@ -35,7 +35,7 @@ public class BalancedParanthesis {
                 stack.push(expression.charAt(i));
             }
 
-            System.out.print(stack.toString().replaceAll("\\[", "").replaceAll("]", ""));
+            //System.out.print(stack.toString().replaceAll("\\[", "").replaceAll("]", ""));
         }
         //System.out.println(stack.toString());
 
