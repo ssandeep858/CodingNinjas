@@ -49,7 +49,7 @@ public class LCA {
         if (root == null) {
             return null;
         }
-        // this condition is not needed to be honest
+        
         if (root.data == a || root.data == b) {
             return root;
         }

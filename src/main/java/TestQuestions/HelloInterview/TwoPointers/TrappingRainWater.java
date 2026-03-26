@@ -1,16 +1,15 @@
-package NeetCode150.NeetCode75;
+package TestQuestions.HelloInterview;
 
-import java.lang.reflect.Array;
-import java.util.Arrays;
-
-public class TrapWater {
+public class TrappingRainWater {
     public static Integer trappingWater(int[] height) {
         // Your code goes here
         int[] leftMax = new int[height.length];
-        int rightMax[] = new int[height.length];
-
+        int[] rightMax = new int[height.length];
         int tempMax = -1;
+
+        // left to right iteration
         for (int i = 0; i < height.length; i++) {
+            // max seen so far
             if (i == 0) {
                 leftMax[i] = height[0];
             } else {
@@ -27,21 +26,23 @@ public class TrapWater {
                 rightMax[i] = tempMax;
             }
         }
-        System.out.println(Arrays.toString(leftMax));
-        System.out.println(Arrays.toString(rightMax));
+
         int count = 0;
         for (int i = 0; i < height.length; i++) {
-            int temp = Math.min(rightMax[i], leftMax[i]) - height[i];
+            int temp = Math.min(leftMax[i], rightMax[i]) - height[i];
             if (temp <= 0) {
                 continue;
             } else {
                 count += temp;
             }
         }
+
         return count;
+
     }
 
     public static void main(String[] args) {
-        System.out.println(trappingWater(new int[] { 3, 4, 1, 2, 2, 5, 1, 0, 2 }));
+        System.out.println(trappingWater(new int[] {3, 4, 1, 2, 2, 5, 1, 0, 2}));
+
     }
 }

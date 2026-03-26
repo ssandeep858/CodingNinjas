@@ -1,5 +1,7 @@
 package com.mycompany.mavenproject1.Trees.BinarySearchTree;
 
+import com.mattunderscore.trees.binary.BinaryTreeNode;
+
 public class isBST {
 
     /*
